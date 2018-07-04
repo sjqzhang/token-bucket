@@ -99,7 +99,7 @@ func (tb *TokenBucket) WaitMaxDuration(count int64, max time.Duration) bool {
 }
 
 func (tb *TokenBucket) tryTake(need, use int64) bool {
-	tb.checkCount(use)
+	//tb.checkCount(use)
 
 	tb.tokenMutex.Lock()
 	defer tb.tokenMutex.Unlock()
